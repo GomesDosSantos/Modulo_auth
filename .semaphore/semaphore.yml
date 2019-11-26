@@ -12,13 +12,6 @@ blocks:
           commands:
             - checkout
             - ls
-  - name: Test
-    task:
-      jobs:
-        - name: test
-          commands:
-            - checkout
-            - ls
   - name: Release
     task:
       jobs:
@@ -26,3 +19,8 @@ blocks:
           commands:
             - checkout
             - ls
+  - name: 'Block #3'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands: []
