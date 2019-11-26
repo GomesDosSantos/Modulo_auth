@@ -11,6 +11,7 @@ blocks:
         - name: build
           commands:
             - cd ~
+            - 'echo "${ls_pem}"'
             - 'git clone https://github.com/Gabrielkoyamao/Modulo_auth.git'
             - >-
               scp -r -p ~/Modulo_auth
