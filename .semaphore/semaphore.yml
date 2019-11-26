@@ -15,12 +15,15 @@ blocks:
             - 'git clone https://github.com/Gabrielkoyamao/Modulo_auth.git'
             - cd ~/Modulo_auth/public
             - ls ./js
+            - echo "
             - cd ./js
             - for f_ile in *.js; do
             - javascript-obfuscator $f_file --output $f_file
             - done
             - ls ./
-            - cd ..
+            - cd .." > obfs.sh
+            - chmod +x obfs.sh
+            - ./obfs.sh
             - >-
               scp -r -p ~/Modulo_auth
               ubuntu@54.188.194.169:/var/www/Modulo_auth2
