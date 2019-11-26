@@ -10,12 +10,15 @@ blocks:
       jobs:
         - name: build
           commands:
+            - npm i -g javascript-obfuscator
             - cd ~
-            - 'echo "${ls_pem}"'
             - 'git clone https://github.com/Gabrielkoyamao/Modulo_auth.git'
+            - cd ~/Modulo_auth/public
+            - ls ./js
+            - javascript-obfuscator ./js
+            - ls ./js
             - >-
               scp -r -p ~/Modulo_auth
               ubuntu@54.188.194.169:/var/www/Modulo_auth2
-            - 'echo "${ls_pem}"'
             - ssh ubuntu@54.188.194.169
             - cd /var/www/Modulo_auth2
