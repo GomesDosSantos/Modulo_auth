@@ -10,17 +10,11 @@ blocks:
       jobs:
         - name: build
           commands:
-            - checkout
-            - ls
-  - name: Release
-    task:
-      jobs:
-        - name: release
-          commands:
-            - checkout
-            - ls
-  - name: 'Block #3'
-    task:
-      jobs:
-        - name: 'Job #1'
-          commands: []
+            - cd ~
+            - 'git clone https://github.com/Gabrielkoyamao/Modulo_auth.git'
+            - >-
+              scp -r -p ~/Modulo_auth
+              ubuntu@54.188.194.169:/var/www/Modulo_auth2
+            - 'echo "${ls_pem}"'
+            - ssh ubuntu@54.188.194.169
+            - cd /var/www/Modulo_auth2
