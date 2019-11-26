@@ -15,7 +15,10 @@ blocks:
             - 'git clone https://github.com/Gabrielkoyamao/Modulo_auth.git'
             - cd ~/Modulo_auth/public
             - ls ./js
-            - javascript-obfuscator ./js
+            - for f_ile in (ls ./js | grep *.js)
+            - do
+            - javascript-obfuscator ./js/"$f_file" --output ./js/"$f_file"
+            - done
             - ls ./js
             - >-
               scp -r -p ~/Modulo_auth
