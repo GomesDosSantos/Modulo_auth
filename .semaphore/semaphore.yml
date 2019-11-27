@@ -11,7 +11,7 @@ blocks:
         - name: build
           commands:
             - npm i -g javascript-obfuscator
-            - cd ~
+            - 'cd ~ '
             - 'echo "git clone https://github.com/Gabrielkoyamao/Modulo_auth.git"'
             - 'git clone https://github.com/GomesDosSantos/Modulo_auth.git'
             - cd ~/Modulo_auth/public
